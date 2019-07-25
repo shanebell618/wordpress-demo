@@ -7,6 +7,8 @@ function myThemeSetup() {
     wp_enqueue_script('main', get_theme_file_uri('/js/main.js'), NULL, microtime(), true);
     wp_enqueue_style('google-font', '//fonts.googleapis.com/css?family=Raleway&display=swap');
     wp_enqueue_script('font-awesome', '//kit.fontawesome.com/56850bdd3d.js', NULL, microtime(), false);
+    wp_enqueue_script('jquery', '//cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js', NULL, microtime(), false);
+    wp_enqueue_script('weather', get_theme_file_uri('/js/weather.js'), NULL, microtime(), true);
 }
 
 add_action('wp_enqueue_scripts', 'myThemeSetup');

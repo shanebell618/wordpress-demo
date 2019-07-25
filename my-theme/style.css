@@ -237,6 +237,10 @@ section {
 
 /* Section Weather */
 
+section#weather p {
+    font-size: 30px;
+}
+
 /* Pages */
 
 .page-heading {

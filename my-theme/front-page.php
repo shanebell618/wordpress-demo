@@ -94,4 +94,12 @@
 
         </section>
 
+        <h2 class="section-heading">STL Weather</h2>
+
+        <section id="weather">
+            <img class="weather-icon">
+            <p class="weather-status"></p>
+            <p class="weather-temperature"></p>
+        </section>
+
 <?php get_footer(); ?>
