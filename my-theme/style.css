@@ -1,0 +1,408 @@
+/*
+Theme Name: My Theme
+Author: Shane Bell
+Author URI: http://shanebell.info
+Description: Demo theme
+Version: 1.0
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #8a99ff;
+}
+
+main {
+    margin: 0 auto;
+}
+
+input, textarea {
+    height: 34px;
+    width: 100%;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    border-top: none;
+    border-bottom: 1px solid #DDD;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .39), 0 -1px 1px #FFF, 0 1px 0 #FFF;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+}
+
+/* Banner */
+
+#banner {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, 0.3);
+    background: url(img/banner-bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    color: white;
+}
+
+#banner h1 {
+    padding: 5px;
+    background: #8a99ff;
+    border-radius: 5%;
+    font-size: 2em;
+}
+
+#banner h2 {
+    font-size: 1.5em;
+    background: black;
+    padding: 2px 24px;
+    border-radius: 5%;
+}
+
+/* Search Dropdown */
+
+#search-dropdown {
+    position: fixed;
+    top: 24px;
+    right: 0;
+    width: 500px;
+    pointer-events: none;
+    z-index: 50;
+    transition: 0.3s;
+}
+
+#search-dropdown input {
+    height: 40px;
+    width: 100%;
+    padding-left: 15px;
+}
+
+/* Navigation */
+
+nav {
+    height: 80px;
+    background: #8a99ff;
+    width: 100%;
+    margin: 0;
+    position: fixed;
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 12px 0 0;
+    box-sizing: border-box;
+    z-index: 100;
+}
+
+nav a {
+    padding: 0 20px;
+    color: white;
+    transition: 0.4s;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: #ffc8c8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin: 0;
+}
+
+.active {
+    color: #ffc8c8;
+}
+
+#logo {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 20px;
+    color: white;
+    transition: 0.4s;
+}
+
+#logo img {
+    height: 75px;
+}
+
+#hamburger-icon {
+    display: none;
+    align-items: center;
+    height: 100%;
+    font-size: 25px;
+    padding: 0 4px;
+    color: white;
+}
+
+#search-icon {
+    color: white;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#search-icon:hover {
+    color: #ffc8c8;
+}
+
+/* Mobile Navigation */
+
+#mobile-nav {
+    display: none;
+    background-color: rgb(53, 53, 53);
+    z-index: 100;
+    position: fixed;
+    transition: 0.2s;
+    margin-top: 72px;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+
+#mobile-nav ul {
+    list-style: none;
+    padding: 10px 32px;
+}
+
+#mobile-nav ul li {
+    padding: 8px;
+}
+
+#mobile-nav a {
+    font-size: 20px;
+    color: white;
+}
+
+#mobile-nav input {
+    width: 85%;
+    padding: 8px;
+    font-size: 20px;
+    text-align: center;
+}
+
+/* Sections */
+
+section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}
+
+.section-heading {
+    font-size: 2em;
+    text-align: center;
+    transition: all 0.2s;
+    padding: 10px;
+}
+
+.section-heading:hover {
+    padding: 13px;
+}
+
+.section-heading::before, .section-heading::after {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid black;
+    width: 4rem;
+    margin: 0 1rem;
+    transform: translateY(-1rem);
+}
+
+/* Section Weather */
+
+/* Pages */
+
+.page-heading {
+    font-size: 2em;
+    transition: all 0.2s;
+    padding: 10px;
+    margin-top: 105px;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+.page-heading:hover {
+    padding: 13px;
+}
+
+.page-heading::before, .page-heading::after {
+    display: inline-block;
+    content: "";
+    border-top: .3rem solid black;
+    width: 4rem;
+    margin: 0 1rem;
+    transform: translateY(-1rem);
+}
+
+.page-card-text {
+    padding: 0 20%;
+}
+
+/* Cards */
+
+.card {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-img img {
+    transition: 0.2s;
+}
+
+.card-img img:hover {
+    box-shadow: 0 10px 6px -6px #777;
+    padding-top: 2px;
+    padding-left: 2px;
+}
+
+.card .card-text {
+    padding: 0 8px;
+}
+
+.card-meta {
+    padding: 8px;
+    line-height: 1.4;
+    font-style: italic;
+}
+
+/* Read More */
+
+.read-more {
+    padding: 8px 24px;
+    border: 1px solid black;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+    background-color: #8a99ff;
+    display: inline-block;
+    transition: 0.2s;
+}
+
+.read-more:hover {
+    color: #ffc8c8;
+    padding-right: 30px;
+}
+
+/* Footer */
+
+footer {
+    background: black;
+    padding: 8px;
+    color: #eee;
+    display: flex;
+}
+
+footer a {
+    color: white;
+}
+
+footer #footer-left {
+    flex: 1;
+    border-right: 1px solid #8a99ff;
+    padding-left: 32px;
+}
+
+footer #footer-left ul {
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+}
+
+footer #footer-right {
+    flex: 2;
+    text-align: center;
+}
+
+footer #footer-right i {
+    font-size: 40px;
+    margin-top: 5px;
+}
+
+footer #footer-right i:hover {
+    color: #ffc8c8;
+}
+
+/* Queries */
+
+@media (min-width: 720px) {
+    main {
+        width: 95%;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        width: 85%;
+    }
+}
+
+@media (max-width: 900px) {
+    nav ul {
+        display: none;
+    }
+    #hamburger-icon {
+        display: flex;
+    }
+    #search-icon {
+        display: none;
+    }
+    #mobile-nav {
+        display: block;
+    }
+}
+
+@media (max-width: 719px) {
+    main {
+        width: 95%;
+    }
+    section {
+        flex-direction: column;
+    }
+    .card, .card .card-img img {
+        width: 100%;
+    }
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+    footer #footer-left {
+        flex: 1;
+        border-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 384px) {
+    #banner h1 {
+        font-size: 1.5em;
+    }
+}
