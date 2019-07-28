@@ -18,7 +18,10 @@
                 <a href="<?php echo get_site_url() ?>/posts" <?php if(get_post_type() === 'post') echo 'class="active"' ?>>Posts</a>
             </li>
             <li>
-                <a href="<?php echo get_site_url() ?>/custom-posts" <?php if(get_post_type() === 'custom-post') echo 'class="active"' ?>>Custom Posts</a>
+                <a href="<?php echo get_site_url() ?>/custom-posts" <?php if(get_post_type() === 'custom-posts') echo 'class="active"' ?>>Custom Posts</a>
+            </li>
+            <li>
+                <a href="<?php echo get_site_url() ?>/beaver-builder" <?php if(is_page('beaver-builder')) echo 'class="active"' ?>>Beaver Builder</a>
             </li>
             <li>
                 <input type="text" placeholder="Search...">
@@ -42,7 +45,10 @@
                 <a href="<?php echo get_site_url() ?>/posts" <?php if(get_post_type() === 'post') echo 'class="active"' ?>>Posts</a>
             </li>
             <li>
-                <a href="<?php echo get_site_url() ?>/custom-posts" <?php if(get_post_type() === 'custom-post') echo 'class="active"' ?>>Custom Posts</a>
+                <a href="<?php echo get_site_url() ?>/custom-posts" <?php if(get_post_type() === 'custom-posts') echo 'class="active"' ?>>Custom Posts</a>
+            </li>
+            <li>
+                <a href="<?php echo get_site_url() ?>/beaver-builder" <?php if(is_page('beaver-builder')) echo 'class="active"' ?>>Beaver Builder</a>
             </li>
             <li>
                 <div id="search-icon">

@@ -198,6 +198,10 @@ nav ul {
     color: white;
 }
 
+#mobile-nav a.active {
+    color: #ffc8c8;
+}
+
 #mobile-nav input {
     width: 85%;
     padding: 8px;
@@ -355,6 +359,16 @@ footer #footer-right i:hover {
     color: #ffc8c8;
 }
 
+/* BB Specific */
+
+.fl-builder-content {
+    padding-top: 72px;
+}
+
+.photo-title-above {
+    margin-bottom: 30px;
+}
+
 /* Queries */
 
 @media (min-width: 720px) {
@@ -405,8 +419,20 @@ footer #footer-right i:hover {
     }
 }
 
+@media (max-width: 425px) {
+    .page-heading {
+        font-size: 1.3em;
+    }
+}
+
 @media (max-width: 384px) {
     #banner h1 {
         font-size: 1.5em;
+    }
+    .page-heading {
+        font-size: 1.3em;
+    }
+    .page-heading::before, .page-heading::after {
+        width: 2rem;
     }
 }

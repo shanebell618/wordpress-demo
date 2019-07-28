@@ -1,5 +1,8 @@
 <?php
 
+//Defines
+require 'vendor/autoload.php';
+
 //Add css and js
 
 function myThemeSetup() {
@@ -48,3 +51,42 @@ function myCustomPostType() {
 }
 
 add_action('init', 'myCustomPostType');
+
+
+
+
+//Beaver Builder - Adding to Default Modules
+
+//PHOTO
+//Filter settings form for photo module
+add_filter('fl_builder_register_settings_form', function($form, $form_slug) {
+    if('photo' === $form_slug) {
+        $form['general']['sections']['photo-title'] = [
+            'title' => 'Photo Title',
+            'fields' => [
+                'photo_title_above' => [
+                    'label' => 'Photo Title (Above Image)',
+                    'type' => 'text'
+                ]
+            ]
+        ];
+    }
+    
+    return $form;
+}, 10, 2);
+
+//Filter HTML of photo module and add title element
+add_filter('fl_builder_render_module_content', function($html, $module) {
+    if('photo' !== $module->slug) {
+        return $html;
+    }
+
+    $content = new \Wa72\HtmlPageDom\HtmlPageCrawler($html);
+    $photoTitle = $module->settings->photo_title_above;
+
+    if(isset($module->settings->photo_title_above) && strlen($module->settings->photo_title_above) !== 0) {
+        $content->filter('.fl-photo-img')->before('<h2 class="photo-title-above">' . $photoTitle . '</h2>');
+    }
+
+    return $content;
+}, 10, 2);
