@@ -1,0 +1,113 @@
+.morphext > .animated {
+    display: inline-block;
+}
+
+.animated-photo-container {
+    text-align: center;
+}
+
+.animated-photo {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  width: 100%;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  background: #ffffff;
+}
+
+.animated-photo *,
+.animated-photo:before,
+.animated-photo:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.animated-photo img {
+  max-width: 100%;
+  backface-visibility: hidden;
+  vertical-align: top;
+  width: 100%;
+}
+
+.animated-photo:before,
+.animated-photo:after {
+  content: '';
+  background-color: #000;
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.animated-photo:before {
+  width: 300px;
+  height: 2px;
+}
+
+.animated-photo:after {
+  height: 300px;
+  width: 2px;
+}
+
+.animated-photo figcaption {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.animated-photo h3 {
+  font-weight: 400;
+  padding: 8px 15px;
+  margin: 0;
+  opacity: 0;
+  -webkit-transform: translateY(100%);
+  transform: translateY(100%);
+}
+
+.animated-photo a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.animated-photo:hover img,
+.animated-photo.hover img {
+  zoom: 1;
+  filter: alpha(opacity=25);
+  -webkit-opacity: 0.25;
+  opacity: 0.25;
+}
+
+.animated-photo:hover:before,
+.animated-photo.hover:before,
+.animated-photo:hover:after,
+.animated-photo.hover:after {
+  opacity: 1;
+}
+
+.animated-photo:hover:before,
+.animated-photo.hover:before {
+  width: 50px;
+}
+
+.animated-photo:hover:after,
+.animated-photo.hover:after {
+  height: 50px;
+}
+
+.animated-photo:hover h3,
+.animated-photo.hover h3 {
+  -webkit-transform: translateY(0%);
+  transform: translateY(0%);
+  opacity: 1;
+}

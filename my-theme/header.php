@@ -24,6 +24,9 @@
                 <a href="<?php echo get_site_url() ?>/beaver-builder" <?php if(is_page('beaver-builder')) echo 'class="active"' ?>>Beaver Builder</a>
             </li>
             <li>
+                <a href="<?php echo get_site_url() ?>/more-css" <?php if(is_page('more-css')) echo 'class="active"' ?>>More CSS</a>
+            </li>
+            <li>
                 <input type="text" placeholder="Search...">
             </li>
         </ul>
@@ -49,6 +52,9 @@
             </li>
             <li>
                 <a href="<?php echo get_site_url() ?>/beaver-builder" <?php if(is_page('beaver-builder')) echo 'class="active"' ?>>Beaver Builder</a>
+            </li>
+            <li>
+                <a href="<?php echo get_site_url() ?>/more-css" <?php if(is_page('more-css')) echo 'class="active"' ?>>More CSS</a>
             </li>
             <li>
                 <div id="search-icon">

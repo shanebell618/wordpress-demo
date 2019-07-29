@@ -369,6 +369,41 @@ footer #footer-right i:hover {
     margin-bottom: 30px;
 }
 
+/* More CSS Page Specific */
+
+.video-header {
+    text-align: center;
+}
+
+.video-header h2 {
+    color: white;
+    font-size: 5em;
+}
+
+.video-header a {
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    color: #ffffff;
+    background-color: rgba(0,0,0,0);
+    border-radius: 0px 0px 0px 0px;
+    padding: 15px 40px 15px 40px;
+    transition: 0.2s;
+    border: 1px solid white;
+}
+
+.video-header a:hover {
+    font-size: 22px;
+    color: #8a99ff;
+    background-color: #ffffff;
+    border-color: #8a99ff;
+    padding: 17px 42px 17px 42px;
+}
+
+#more-css-hr {
+    border-top: 7px solid #8a99ff;
+}
+
 /* Queries */
 
 @media (min-width: 720px) {
@@ -423,6 +458,9 @@ footer #footer-right i:hover {
     .page-heading {
         font-size: 1.3em;
     }
+    .section-heading {
+        font-size: 1.3em;
+    }
 }
 
 @media (max-width: 384px) {
@@ -433,6 +471,12 @@ footer #footer-right i:hover {
         font-size: 1.3em;
     }
     .page-heading::before, .page-heading::after {
-        width: 2rem;
+        width: 1rem;
+    }
+    .section-heading {
+        font-size: 1.3em;
+    }
+    .section-heading::before, .section-heading::after {
+        width: 1rem;
     }
 }
